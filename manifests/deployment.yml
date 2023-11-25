@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: fevnpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fevnpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: fevnpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: fevnpipelinesjavascriptdocker 
+          image: mycontainerregistery2.azurecr.io/fevnpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
